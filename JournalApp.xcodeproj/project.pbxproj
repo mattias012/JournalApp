@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		CDF493C82BB1EA5300EA5CB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF493C72BB1EA5300EA5CB8 /* AppDelegate.swift */; };
 		CDF493CA2BB1EA5300EA5CB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF493C92BB1EA5300EA5CB8 /* SceneDelegate.swift */; };
-		CDF493CC2BB1EA5300EA5CB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF493CB2BB1EA5300EA5CB8 /* ViewController.swift */; };
 		CDF493CF2BB1EA5300EA5CB8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CDF493CE2BB1EA5300EA5CB8 /* Base */; };
 		CDF493D12BB1EA5500EA5CB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF493D02BB1EA5500EA5CB8 /* Assets.xcassets */; };
 		CDF493D42BB1EA5500EA5CB8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CDF493D32BB1EA5500EA5CB8 /* Base */; };
 		CDF493DF2BB1EA5600EA5CB8 /* JournalAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF493DE2BB1EA5600EA5CB8 /* JournalAppTests.swift */; };
 		CDF493E92BB1EA5600EA5CB8 /* JournalAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF493E82BB1EA5600EA5CB8 /* JournalAppUITests.swift */; };
 		CDF493EB2BB1EA5600EA5CB8 /* JournalAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF493EA2BB1EA5600EA5CB8 /* JournalAppUITestsLaunchTests.swift */; };
+		CDF493F82BB1EECC00EA5CB8 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF493F72BB1EECC00EA5CB8 /* JournalViewController.swift */; };
+		CDF493FC2BB1EFC000EA5CB8 /* JournalEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF493FB2BB1EFC000EA5CB8 /* JournalEntryModel.swift */; };
+		CDF493FE2BB211B000EA5CB8 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF493FD2BB211B000EA5CB8 /* Journal.swift */; };
+		CDF494002BB21F6C00EA5CB8 /* MyEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF493FF2BB21F6C00EA5CB8 /* MyEntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,6 @@
 		CDF493C42BB1EA5300EA5CB8 /* JournalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JournalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF493C72BB1EA5300EA5CB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDF493C92BB1EA5300EA5CB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CDF493CB2BB1EA5300EA5CB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CDF493CE2BB1EA5300EA5CB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDF493D02BB1EA5500EA5CB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDF493D32BB1EA5500EA5CB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		CDF493E42BB1EA5600EA5CB8 /* JournalAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JournalAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF493E82BB1EA5600EA5CB8 /* JournalAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalAppUITests.swift; sourceTree = "<group>"; };
 		CDF493EA2BB1EA5600EA5CB8 /* JournalAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CDF493F72BB1EECC00EA5CB8 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
+		CDF493FB2BB1EFC000EA5CB8 /* JournalEntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryModel.swift; sourceTree = "<group>"; };
+		CDF493FD2BB211B000EA5CB8 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		CDF493FF2BB21F6C00EA5CB8 /* MyEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,10 @@
 		CDF493C62BB1EA5300EA5CB8 /* JournalApp */ = {
 			isa = PBXGroup;
 			children = (
+				CDF493FA2BB1EF9C00EA5CB8 /* Models */,
+				CDF493F92BB1EEF700EA5CB8 /* ViewControllers */,
 				CDF493C72BB1EA5300EA5CB8 /* AppDelegate.swift */,
 				CDF493C92BB1EA5300EA5CB8 /* SceneDelegate.swift */,
-				CDF493CB2BB1EA5300EA5CB8 /* ViewController.swift */,
 				CDF493CD2BB1EA5300EA5CB8 /* Main.storyboard */,
 				CDF493D02BB1EA5500EA5CB8 /* Assets.xcassets */,
 				CDF493D22BB1EA5500EA5CB8 /* LaunchScreen.storyboard */,
@@ -125,6 +132,24 @@
 				CDF493EA2BB1EA5600EA5CB8 /* JournalAppUITestsLaunchTests.swift */,
 			);
 			path = JournalAppUITests;
+			sourceTree = "<group>";
+		};
+		CDF493F92BB1EEF700EA5CB8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CDF493F72BB1EECC00EA5CB8 /* JournalViewController.swift */,
+				CDF493FF2BB21F6C00EA5CB8 /* MyEntryViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CDF493FA2BB1EF9C00EA5CB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CDF493FB2BB1EFC000EA5CB8 /* JournalEntryModel.swift */,
+				CDF493FD2BB211B000EA5CB8 /* Journal.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDF493CC2BB1EA5300EA5CB8 /* ViewController.swift in Sources */,
+				CDF493FC2BB1EFC000EA5CB8 /* JournalEntryModel.swift in Sources */,
+				CDF493FE2BB211B000EA5CB8 /* Journal.swift in Sources */,
 				CDF493C82BB1EA5300EA5CB8 /* AppDelegate.swift in Sources */,
+				CDF493F82BB1EECC00EA5CB8 /* JournalViewController.swift in Sources */,
 				CDF493CA2BB1EA5300EA5CB8 /* SceneDelegate.swift in Sources */,
+				CDF494002BB21F6C00EA5CB8 /* MyEntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +478,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,6 +507,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
