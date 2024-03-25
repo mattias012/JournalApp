@@ -12,6 +12,7 @@ class JournalViewController: UITableViewController {
     var journal = Journal()
     let journalEntryCell = "journalEntryCell"
     let newEntrySegue = "newEntrySegue"
+    let showEntrySegue = "showEntrySegue"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +46,7 @@ class JournalViewController: UITableViewController {
 
         let journalEntry = journal.getEntry(index: indexPath.row)
         
-        cell.textLabel?.text = journalEntry?.content
+        cell.textLabel?.text = journalEntry?.date
 
         return cell
     }
@@ -95,6 +96,14 @@ class JournalViewController: UITableViewController {
             let destinationVC = segue.destination as? MyEntryViewController
             
             destinationVC?.journal = journal
+        } else if segue.identifier == showEntrySegue {
+            guard let destinationVC = segue.destination as? showEntryViewController else { return }
+            
+            guard let cell = sender as? UITableViewCell else  { return }
+            guard let indexPath = tableView.indexPath(for: cell) else  { return }
+            guard let entry = journal.getEntry(index: indexPath.row) else { return }
+            
+            destinationVC.journalEntry = entry
         }
         
     }

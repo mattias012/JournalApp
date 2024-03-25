@@ -26,6 +26,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="journalEntryCell"/>
+                                <connections>
+                                    <segue destination="GUp-tE-TFR" kind="show" identifier="showEntrySegue" id="qVD-DX-3RF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -56,7 +59,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PNd-aJ-aDT">
                                 <rect key="frame" x="10" y="113" width="373" height="157"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <accessibility key="accessibilityConfiguration" hint="Write something.."/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -72,6 +75,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gBC-Vi-h7h">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wv7-Bw-8gu">
+                            <connections>
+                                <action selector="cancelButton:" destination="Wly-uZ-clg" id="x1B-hG-qCC"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="qoC-yo-rig">
                             <connections>
                                 <action selector="saveButton:" destination="Wly-uZ-clg" id="r2m-mr-rzX"/>
@@ -85,6 +93,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AcK-3F-l2n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1000.763358778626" y="-201.40845070422537"/>
+        </scene>
+        <!--Show Entry View Controller-->
+        <scene sceneID="vIn-yK-ccs">
+            <objects>
+                <viewController id="GUp-tE-TFR" customClass="showEntryViewController" customModule="JournalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2cg-LY-eEr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5Zd-OC-y0w">
+                                <rect key="frame" x="10" y="113" width="373" height="187"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2nl-m7-heD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Zd-OC-y0w" firstAttribute="top" secondItem="2nl-m7-heD" secondAttribute="top" constant="10" id="9Fi-dJ-O6t"/>
+                            <constraint firstItem="2nl-m7-heD" firstAttribute="trailing" secondItem="5Zd-OC-y0w" secondAttribute="trailing" constant="10" id="FiN-Lz-hB2"/>
+                            <constraint firstItem="5Zd-OC-y0w" firstAttribute="leading" secondItem="2nl-m7-heD" secondAttribute="leading" constant="10" id="bHt-T9-J2b"/>
+                            <constraint firstItem="2nl-m7-heD" firstAttribute="bottom" secondItem="5Zd-OC-y0w" secondAttribute="bottom" constant="518" id="zeL-P3-6lR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="F1u-sh-MD7"/>
+                    <connections>
+                        <outlet property="entryTextView" destination="5Zd-OC-y0w" id="3bh-tr-c30"/>
+                        <outlet property="navBar" destination="F1u-sh-MD7" id="M1y-lT-TMR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bw6-mO-BA1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="494"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VMw-KH-1Rp">

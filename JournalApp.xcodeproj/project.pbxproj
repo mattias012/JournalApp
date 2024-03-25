@@ -19,6 +19,7 @@
 		CDF493FC2BB1EFC000EA5CB8 /* JournalEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF493FB2BB1EFC000EA5CB8 /* JournalEntryModel.swift */; };
 		CDF493FE2BB211B000EA5CB8 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF493FD2BB211B000EA5CB8 /* Journal.swift */; };
 		CDF494002BB21F6C00EA5CB8 /* MyEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF493FF2BB21F6C00EA5CB8 /* MyEntryViewController.swift */; };
+		CDF494022BB225BE00EA5CB8 /* showEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF494012BB225BE00EA5CB8 /* showEntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		CDF493FB2BB1EFC000EA5CB8 /* JournalEntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryModel.swift; sourceTree = "<group>"; };
 		CDF493FD2BB211B000EA5CB8 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		CDF493FF2BB21F6C00EA5CB8 /* MyEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEntryViewController.swift; sourceTree = "<group>"; };
+		CDF494012BB225BE00EA5CB8 /* showEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showEntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			children = (
 				CDF493F72BB1EECC00EA5CB8 /* JournalViewController.swift */,
 				CDF493FF2BB21F6C00EA5CB8 /* MyEntryViewController.swift */,
+				CDF494012BB225BE00EA5CB8 /* showEntryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDF493FC2BB1EFC000EA5CB8 /* JournalEntryModel.swift in Sources */,
+				CDF494022BB225BE00EA5CB8 /* showEntryViewController.swift in Sources */,
 				CDF493FE2BB211B000EA5CB8 /* Journal.swift in Sources */,
 				CDF493C82BB1EA5300EA5CB8 /* AppDelegate.swift in Sources */,
 				CDF493F82BB1EECC00EA5CB8 /* JournalViewController.swift in Sources */,

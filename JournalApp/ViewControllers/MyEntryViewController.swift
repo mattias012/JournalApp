@@ -13,6 +13,10 @@ class MyEntryViewController: UIViewController {
     
     @IBOutlet weak var journalEntryTextView: UITextView!
     
+    @IBAction func cancelButton(_ sender: UIBarButtonItem) {
+        
+        navigationController?.popViewController(animated: true)
+    }
     @IBAction func saveButton(_ sender: UIBarButtonItem) {
         
         if let entryText = journalEntryTextView.text {
@@ -20,13 +24,15 @@ class MyEntryViewController: UIViewController {
             
             journal?.add(entry: newEntry)
         }
+        
+        navigationController?.popViewController(animated: true)
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        journalEntryTextView.becomeFirstResponder()
     }
     
 
